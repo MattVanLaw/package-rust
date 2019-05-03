@@ -1,8 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import getFormattedOutdated from './utils/get-formatted-outdated';
 
 function App() {
+  const json = require('./outdated.json');
+
+  const modules = getFormattedOutdated(json)
+
   return (
     <div className="App">
       <header className="App-header">
